@@ -7,7 +7,7 @@
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
 function consume(a,b,cb){
-  return callback(a,b)
+  return cb(a,b)
 }
 
 
@@ -16,14 +16,17 @@ function consume(a,b,cb){
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-function add(a,b, cb){
-  return callback(a + b);
+function consume(a, b, cb) {
+  return cb(a, b);
 }
-function multiply(a,b, cb){
-  return callback( a * b);
+function add(a, b) {
+   return a + b;
 }
-function greeting(first, last, cb){
-  return callback(`Hello ${first} ${last}, nice to meet you!`)
+function multiply(a, b) {
+ return a * b;
+}
+function greeting(first, last) {
+   return `Hello ${first} ${last}, nice to meet you!`;
 }
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 // console.log(consume(2, 2, add)); // 4
@@ -37,7 +40,7 @@ function greeting(first, last, cb){
 
 // Explanation: 
 
-nested function can access internal because it is a child of myfunction and can access all its properties. 
+nestedfunction can access internal because it is a child of myfunction and can access all its properties. 
 const external = "I'm outside the function";
 
 function myFunction() {

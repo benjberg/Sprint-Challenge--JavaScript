@@ -8,7 +8,7 @@
  function CuboidMaker(att) {
   this.Length = att.length;
   this.width = att.width;
-  this.height - att.height;
+  this.height = att.height;
 }
 
 /* == Step 2: Volume Method ==
@@ -16,7 +16,7 @@
   
   Formula for cuboid volume: length * width * height
 */
-cuboidMaker.prototype.volume = function(){
+CuboidMaker.prototype.volume = function(){
   return this.length * this.width * this.height
 }
 
@@ -25,7 +25,7 @@ cuboidMaker.prototype.volume = function(){
 
   Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
 */
-cuboidMaker.prototype.surfaceArea = function(){
+CuboidMaker.prototype.surfaceArea = function(){
   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height)
 }
 
